@@ -22,7 +22,6 @@ namespace RedliningCheck
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     /// 
-
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -58,8 +57,6 @@ namespace RedliningCheck
             }
         }
 
-
-
         void DirSearch(string sDir)
         {
             try
@@ -89,12 +86,8 @@ namespace RedliningCheck
             }
         }
 
-
-   
-
         void CheckRevision(string file)
         {
-
             //Kontrolle Erstellungsdatum mit Änderungsdatum kontrollieren
             string fileCreatedDate = File.GetCreationTime(file).ToString("yyyy - MM - dd HH: mm:ss");
             string fileEditDate = File.GetLastWriteTime(file).ToString("yyyy - MM - dd HH: mm:ss");
@@ -109,8 +102,6 @@ namespace RedliningCheck
             }
         }
 
-
-
         private void listbox_MouseDoubleClick(object sender, EventArgs e)
         {
             if (listBox.SelectedItem != null)
@@ -118,6 +109,5 @@ namespace RedliningCheck
                 System.Diagnostics.Process.Start(listBox.SelectedItem.ToString()); 
             }
         }
-
     }
 }
