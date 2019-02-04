@@ -7,12 +7,9 @@
         mc:Ignorable="d"
         Title="RevisionCheck 1.0.0 - (c) Elbe Christopher" Height="550" Width="900" Icon="check_mark___kopie_Ghu_icon.ico" MinWidth="900" MinHeight="550">
     <Grid Margin="0,0,0,0">
-
         <Label x:Name="label" Content="Drop folders/files here" Margin="45,40,45,0" VerticalAlignment="Top" Height="55" FontSize="36" HorizontalAlignment="Center"/>
         <Rectangle Stroke="#FFBDBDBD" StrokeThickness="3" Margin="7,7,7,0" StrokeDashArray="4 4" SnapsToDevicePixels="True" RenderTransformOrigin="0.5,0.5" Height="128" VerticalAlignment="Top" />
         <ListView Drop="ListView_Drop" AllowDrop="True" Margin="10,10,10,0" BorderBrush="#FF5B5B5B" Opacity="0.7" Height="122" VerticalAlignment="Top" Background="#FFD6D6D6" BorderThickness="0"/>
         <ListBox x:Name="listBox" Margin="10,140,10,10" MouseDoubleClick="listbox_MouseDoubleClick" />
-
-
     </Grid>
 </Window>
