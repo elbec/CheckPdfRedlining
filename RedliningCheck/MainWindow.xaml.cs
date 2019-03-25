@@ -15,6 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+//Windows 10 Notification
+using NotificationsExtensions.Toasts;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
 
 namespace RedliningCheck
 {
@@ -27,8 +31,39 @@ namespace RedliningCheck
         public MainWindow()
         {
             InitializeComponent();
-            
+
+            ToastNotify();
         }
+
+        private void ToastNotify()
+        {
+            string title = "asd Asker has changed his profile picture";
+            string content = "Das ist der Content asdf kdsafjds kfjsadfjsd fksdjfa";
+            string logo = "Assets/StoreLogo.png";
+           // string image = "Assets/StoreLogo.png";
+
+            ToastVisual visual = new ToastVisual()
+            {
+                TitleText = new ToastText() { Text = title },
+                BodyTextLine1 = new ToastText() { Text = content },
+                AppLogoOverride = new ToastAppLogo() { Source = new ToastImageSource(logo), Crop = ToastImageCrop.Circle }
+                //    AddImageQuery = new ToastImage() { Source = new ToastImageSource(image) } 
+            };
+
+            ToastActionsCustom action = new ToastActionsCustom
+            {
+                Inputs = { new ToastTextBox("txt") { PlaceholderContent = "Write a comment here .." } },
+                //      Buttons = { new ToastButton("Reply", new QueryString() { "action", "Reply" }.ToString()) }
+            };
+
+            ToastContent Content = new ToastContent() { Visual = visual, Actions = action };
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(Content.GetContent());
+            ToastNotification notification = new ToastNotification(xmlDoc);
+            ToastNotificationManager.CreateToastNotifier().Show(notification);
+        }
+
 
         private void ListView_Drop(object sender, DragEventArgs e)
         {
