@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RedliningCheck"
         mc:Ignorable="d"
-        Title="RevisionCheck 1.0.0 - (c) Elbe Christopher" Height="550" Width="900" Icon="check_mark___kopie_Ghu_icon.ico" MinWidth="900" MinHeight="550">
+        Title="RevisionCheck" Height="550" Width="900" Icon="check_mark___kopie_Ghu_icon.ico" MinWidth="900" MinHeight="550">
     <Grid Margin="0,0,0,0">
         <Label x:Name="label" Content="Drop folders/files here" Margin="45,40,45,0" VerticalAlignment="Top" Height="55" FontSize="36" HorizontalAlignment="Center"/>
         <Rectangle Stroke="#FFBDBDBD" StrokeThickness="3" Margin="7,7,7,0" StrokeDashArray="4 4" SnapsToDevicePixels="True" RenderTransformOrigin="0.5,0.5" Height="128" VerticalAlignment="Top" />
