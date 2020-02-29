@@ -1,5 +1,8 @@
 # CheckPdfRedlining
+
 Evaluates the creation date with the modification date of PDF files
+
+![appOverview](https://github.com/elbec/CheckPdfRedlining/blob/master/RedliningCheck/Documentation/RevisionCheckOverview.JPG?raw=true)
 
 Drag pdf-files and/or folder and drop it at the provided place on the UI.
 
