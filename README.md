@@ -1,6 +1,5 @@
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/elbec/CheckPdfRedlining)
 ![GitHub All Releases](https://img.shields.io/github/downloads/elbec/CheckPdfRedlining/total)
-
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/elbec/CheckPdfRedlining)
 
 # CheckPdfRedlining
 
